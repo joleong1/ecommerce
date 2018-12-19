@@ -1,0 +1,15 @@
+//inside the ng oninit
+
+ngOnInit() {
+
+    this.status = 'inactive';
+    this.isUser = true;
+    this.isAdmin = false;
+    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+    if(this.currentUser != null){
+      if(this.currentUser.role=='admin'){
+        this.isUser = false;
+        this.isAdmin = true;
+      }
+      this.status = 'active';
+    }

@@ -1,0 +1,27 @@
+#########    IN APP MODULE   ####################3
+
+@NgModule({
+	LogoutComponent,
+	UserDashboardComponent,
+    SellerDashboardComponent,
+	UserListComponent,
+
+
+}
+
+imports: [
+	    NgxPaginationModule,
+],
+
+
+###############   IN APP ROUTING     #################
+
+
+   { path: 'user-list', component: UserListComponent},
+   { path: 'logout', component: LogoutComponent},
+
+   
+   //ONE OF THESE HAS BEEN CHANGED FROM JUST dashboard
+   { path: 'admin-dashboard', component: DashboardComponent},
+   { path: 'seller-dashboard', component: SellerDashboardComponent},
+   { path: 'user-dashboard', component: UserDashboardComponent},
